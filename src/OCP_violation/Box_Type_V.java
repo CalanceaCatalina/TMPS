@@ -1,7 +1,5 @@
 package OCP_violation;
-
 import Singleton.Enum.Size;
-
 import static Singleton.Enum.Size.*;
 
 public class Box_Type_V {
