@@ -13,7 +13,7 @@ public class Ingrediente {
         System.out.println("Lista de ingrediente a fost initiata cu succes! :) ");
     }
 
-// Initializare lenesa Synchronized Accessor- performanta slaba
+// Initializare lenesa Synchronized Accessor - performanta slaba
     private static Ingrediente instance;
 
     public static synchronized Ingrediente getIngrediente() {

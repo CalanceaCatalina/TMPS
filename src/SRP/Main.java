@@ -7,6 +7,7 @@ public class Main {
         public static void main(String[] args) {
 
             Prepare prepare_pizza = new Prepare()
+                    .addName("Diavola")
                     .addDough(Dough.PIZZA_DOUGH)
                     .addSize(Size.ITALIAN)
                     .addCheese(Cheese.MOZZARELLA)

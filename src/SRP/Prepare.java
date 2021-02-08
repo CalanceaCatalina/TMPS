@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Prepare {
+    public String name;
     public Dough dough;
     public Size size;
     public Crust crust;
@@ -16,6 +17,12 @@ public class Prepare {
     public Prepare(){
 
     }
+
+    public Prepare addName(String name){
+        this.name=name;
+        return this;
+    }
+
     public Prepare addDough(Dough dough) {
         this.dough = dough;
         return this;
