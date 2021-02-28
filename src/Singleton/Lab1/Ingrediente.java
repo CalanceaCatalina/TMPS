@@ -6,7 +6,6 @@ public class Ingrediente {
     private String ListaIngrediente_Rancho = "Lista Ingrediente pentru pizza Rancho: \n";
     private String ListaIngrediente_ThaiShrimp = "Lista Ingrediente pentru pizza Thai Shrimp: \n";
 
-    //private constructor to avoid client applications to use constructor
     // Cream constructorul privat ca sa impiedicam aplicatia client sa utilizeze constructorul
     // daca apare de mai multe ori, inseamna ca a fost implemenatat gresit singleton si se creaza mai multe obiecte
     private Ingrediente(){
