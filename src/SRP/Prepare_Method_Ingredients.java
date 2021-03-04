@@ -1,7 +1,4 @@
 package SRP;
-
-import Singleton.Lab1.Ingrediente;
-
 public class Prepare_Method_Ingredients {
 
     //utilizam singleton ca sa ne permita sa accesam toString-ul de mai jos
@@ -19,7 +16,6 @@ public class Prepare_Method_Ingredients {
                 .append(prepare.size)
                 .append(" with")
                 .append(prepare.dough)
-
                 .append("\n");
 
         if (prepare.crust != null) {
@@ -54,7 +50,7 @@ public class Prepare_Method_Ingredients {
         }
 
         if (prepare.magic != null) {
-            sb.append("And lastly, of course, it is maid with lots of ");
+            sb.append("And lastly, of course, it is made with lots of ");
             for (int i = 0; i<prepare.magic.size(); i++) {
                 sb.append(prepare.magic.get(i));
                 if (i < prepare.magic.size() - 1){

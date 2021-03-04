@@ -1,7 +1,5 @@
 package SRP;
 import Singleton.Enum.*;
-
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 

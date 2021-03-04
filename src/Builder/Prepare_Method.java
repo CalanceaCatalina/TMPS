@@ -1,5 +1,5 @@
 package Builder;
-import SRP.Prepare;
+//Clasa Prepare_Method – afișează lista de ingrediente folosite
 public class Prepare_Method {
 
     //utilizam singleton ca sa ne permita sa accesam toString-ul de mai jos
@@ -17,51 +17,53 @@ public class Prepare_Method {
                 .append(prepare.size)
                 .append(" with")
                 .append(prepare.dough)
-
                 .append("\n");
 
         if (prepare.crust != null) {
-            sb.append(" surrounded by ")
+            sb.append("Surrounded by a ")
                     .append(prepare.crust)
                     .append(" crust. ")
                     .append("\n");
         }
 
         if (prepare.cheese != null) {
-            sb.append("With softly and yummy ");
-            for (int i = 0; i<prepare.cheese.size(); i++) {
-                sb.append(prepare.cheese.get(i));
-                if (i < prepare.cheese.size() - 1){
-                    sb.append(", ");
+            if (prepare.cheese.size() != 0) {
+                sb.append("With softly and yummy ");
+                for (int i = 0; i < prepare.cheese.size(); i++) {
+                    sb.append(prepare.cheese.get(i));
+                    if (i < prepare.cheese.size() - 1) {
+                        sb.append(", ");
+                    }
                 }
+                sb.append(" cheese. \n");
             }
-            sb.append(" cheese. \n");
-
-
         }
 
         if (prepare.toppings != null) {
-            sb.append("In addition it has the following specialities on top: ");
-            for (int i = 0; i<prepare.toppings.size(); i++) {
-                sb.append(prepare.toppings.get(i));
-                if (i < prepare.toppings.size() - 1){
-                    sb.append(", ");
+            if (prepare.toppings.size() != 0) {
+                sb.append("It has the following specialities on top: ");
+                for (int i = 0; i < prepare.toppings.size(); i++) {
+                    sb.append(prepare.toppings.get(i));
+                    if (i < prepare.toppings.size() - 1) {
+                        sb.append(", ");
+                    }
                 }
+                sb.append(". \n");
             }
-            sb.append(". \n");
         }
 
         if (prepare.magic != null) {
-            sb.append("And lastly, of course, it is maid with lots of ");
-            for (int i = 0; i<prepare.magic.size(); i++) {
-                sb.append(prepare.magic.get(i));
-                if (i < prepare.magic.size() - 1){
-                    sb.append(", ");
+            if (prepare.magic.size() != 0) {
+                sb.append("And lastly, of course, it is made with lots of ");
+                for (int i = 0; i < prepare.magic.size(); i++) {
+                    sb.append(prepare.magic.get(i));
+                    if (i < prepare.magic.size() - 1) {
+                        sb.append(", ");
+                    }
                 }
+                sb.append(". \n");
             }
-            sb.append(". \n");
         }
-
         return sb.toString();
     }
 }
