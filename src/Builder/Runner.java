@@ -15,7 +15,6 @@ public class Runner {
                 .addMagic(Magic.LOVE)
                 .addMagic(Magic.SOUL)
                 .Build();
-
         System.out.println(Prepare_Method.getPreparationMethod().getMethod(preparepizza_Faraon));
 
         Pizza preparepizza_Rusticana = new BuilderPrepare()
@@ -28,7 +27,6 @@ public class Runner {
                 .addToppings(Toppings.BASIL)
                 .addToppings(Toppings.BLACK_OLIVES)
                 .Build();
-
         System.out.println(Prepare_Method.getPreparationMethod().getMethod(preparepizza_Rusticana));
 
         Pizza preparepizza_Margarita = new BuilderPrepare()
@@ -38,7 +36,6 @@ public class Runner {
                 .addCrust(Crust.THIN_AND_CRISPY)
                 .addCheese(Cheese.CHEDDAR)
                 .Build();
-
         System.out.println(Prepare_Method.getPreparationMethod().getMethod(preparepizza_Margarita));
     }
   }
