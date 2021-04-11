@@ -1,0 +1,391 @@
+@startuml
+
+title __LABORATOR's Class Diagram__\n
+
+  namespace Builder {
+    class Builder.BuilderPrepare {
+    }
+  }
+  
+
+  namespace Builder {
+    class Builder.Pizza {
+    }
+  }
+  
+
+  namespace Builder {
+    class Builder.Prepare_Method {
+    }
+  }
+  
+
+  namespace Builder {
+    class Builder.Runner {
+    }
+  }
+  
+
+  namespace Builder {
+    namespace Composite {
+      class Builder_Composite.BuilderPizza {
+      }
+    }
+  }
+  
+
+  namespace Builder {
+    namespace Composite {
+      interface Builder_Composite.IRecipeBook {
+      }
+    }
+  }
+  
+
+  namespace Builder {
+    namespace Composite {
+      class Builder_Composite.Pizza {
+      }
+    }
+  }
+  
+
+  namespace Builder {
+    namespace Composite {
+      class Builder_Composite.PrepareMethod {
+      }
+    }
+  }
+  
+
+  namespace Builder {
+    namespace Composite {
+      class Builder_Composite.Recipe {
+      }
+    }
+  }
+  
+
+  namespace Builder {
+    namespace Composite {
+      class Builder_Composite.RecipeBook {
+      }
+    }
+  }
+  
+
+  namespace Builder {
+    namespace Composite {
+      class Builder_Composite.Runner {
+      }
+    }
+  }
+  
+
+  namespace OCP {
+    class OCP.Box_Type {
+    }
+  }
+  
+
+  namespace OCP {
+    abstract class OCP.Boxing {
+    }
+  }
+  
+
+  namespace OCP {
+    class OCP.Family_Pizza_Boxing {
+    }
+  }
+  
+
+  namespace OCP {
+    class OCP.Italian_Pizza_Boxing {
+    }
+  }
+  
+
+  namespace OCP {
+    class OCP.Large_Pizza_Boxing {
+    }
+  }
+  
+
+  namespace OCP {
+    class OCP.Medium_Pizza_Boxing {
+    }
+  }
+  
+
+  namespace OCP {
+    class OCP.Runner {
+    }
+  }
+  
+
+  namespace OCP {
+    namespace violation {
+      class OCP_violation.Box_Type_V {
+      }
+    }
+  }
+  
+
+  namespace OCP {
+    namespace violation {
+      class OCP_violation.Family_V_Boxing {
+      }
+    }
+  }
+  
+
+  namespace OCP {
+    namespace violation {
+      class OCP_violation.Italian_V_Boxing {
+      }
+    }
+  }
+  
+
+  namespace OCP {
+    namespace violation {
+      class OCP_violation.Large_V_Boxing {
+      }
+    }
+  }
+  
+
+  namespace OCP {
+    namespace violation {
+      class OCP_violation.Medium_V_Boxing {
+      }
+    }
+  }
+  
+
+  namespace OCP {
+    namespace violation {
+      class OCP_violation.Runner_V {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    class Prototype_AbstractFactory.AFP_Runner {
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Boxes {
+      namespace Abstracts {
+        abstract class Prototype_AbstractFactory.Boxes.Abstracts.Pizza_Box {
+        }
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Boxes {
+      class Prototype_AbstractFactory.Boxes.Box_Type_Calzone {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Boxes {
+      class Prototype_AbstractFactory.Boxes.Box_Type_Family {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Boxes {
+      class Prototype_AbstractFactory.Boxes.Box_Type_Italian {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Boxes {
+      class Prototype_AbstractFactory.Boxes.Box_Type_Large {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Boxes {
+      class Prototype_AbstractFactory.Boxes.Box_Type_Medium {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Factories {
+      class Prototype_AbstractFactory.Factories.Pizza_Calzone_Factory {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Factories {
+      class Prototype_AbstractFactory.Factories.Pizza_Classic_Factory {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Interfaces {
+      interface Prototype_AbstractFactory.Interfaces.IPizza {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Pizza {
+      namespace Abstracts {
+        abstract class Prototype_AbstractFactory.Pizza.Abstracts.Pizza {
+        }
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Pizza {
+      class Prototype_AbstractFactory.Pizza.Pizza_Calzone {
+      }
+    }
+  }
+  
+
+  namespace Prototype_AbstractFactory {
+    namespace Pizza {
+      class Prototype_AbstractFactory.Pizza.Pizza_Classic {
+      }
+    }
+  }
+  
+
+  namespace SRP {
+    class SRP.Main {
+    }
+  }
+  
+
+  namespace SRP {
+    class SRP.Prepare {
+    }
+  }
+  
+
+  namespace SRP {
+    class SRP.Prepare_Method_Ingredients {
+    }
+  }
+  
+
+  namespace Singleton.Enum {
+    enum Cheese {
+    }
+  }
+  
+
+  namespace Singleton.Enum {
+    enum Crust {
+    }
+  }
+  
+
+  namespace Singleton.Enum {
+    enum Dough {
+    }
+  }
+  
+
+  namespace Singleton.Enum {
+    enum Magic {
+    }
+  }
+  
+
+  namespace Singleton.Enum {
+    enum Size {
+    }
+  }
+  
+
+  namespace Singleton.Enum {
+    enum Toppings {
+    }
+  }
+  
+
+  namespace Singleton.Lab1 {
+    class Singleton.Lab1.Ingrediente {
+    }
+  }
+  
+
+  namespace Singleton.Lab1 {
+    class Singleton.Lab1.Runner {
+    }
+  }
+  
+
+  Builder.BuilderPrepare o-- Builder.Pizza : preparepizza
+  Builder.Pizza o-- Singleton.Enum.Crust : crust
+  Builder.Pizza o-- Singleton.Enum.Dough : dough
+  Builder.Pizza o-- Singleton.Enum.Size : size
+  Builder_Composite.BuilderPizza o-- Builder_Composite.Pizza : pizza
+  Builder_Composite.Pizza o-- Singleton.Enum.Crust : crust
+  Builder_Composite.Pizza o-- Singleton.Enum.Dough : dough
+  Builder_Composite.Pizza o-- Singleton.Enum.Size : size
+  Builder_Composite.Recipe .up.|> Builder_Composite.IRecipeBook
+  Builder_Composite.Recipe o-- Builder_Composite.Pizza : pizza
+  Builder_Composite.RecipeBook .up.|> Builder_Composite.IRecipeBook
+  Builder_Composite.RecipeBook o-- Builder_Composite.Pizza : pizza
+  OCP.Family_Pizza_Boxing -up-|> OCP.Boxing
+  OCP.Family_Pizza_Boxing o-- SRP.Prepare : prepare
+  OCP.Italian_Pizza_Boxing -up-|> OCP.Boxing
+  OCP.Italian_Pizza_Boxing o-- SRP.Prepare : prepare
+  OCP.Large_Pizza_Boxing -up-|> OCP.Boxing
+  OCP.Large_Pizza_Boxing o-- SRP.Prepare : prepare
+  OCP.Medium_Pizza_Boxing -up-|> OCP.Boxing
+  OCP.Medium_Pizza_Boxing o-- SRP.Prepare : prepare
+  Prototype_AbstractFactory.Boxes.Box_Type_Calzone -up-|> Prototype_AbstractFactory.Boxes.Abstracts.Pizza_Box
+  Prototype_AbstractFactory.Boxes.Box_Type_Family -up-|> Prototype_AbstractFactory.Boxes.Abstracts.Pizza_Box
+  Prototype_AbstractFactory.Boxes.Box_Type_Italian -up-|> Prototype_AbstractFactory.Boxes.Abstracts.Pizza_Box
+  Prototype_AbstractFactory.Boxes.Box_Type_Large -up-|> Prototype_AbstractFactory.Boxes.Abstracts.Pizza_Box
+  Prototype_AbstractFactory.Boxes.Box_Type_Medium -up-|> Prototype_AbstractFactory.Boxes.Abstracts.Pizza_Box
+  Prototype_AbstractFactory.Factories.Pizza_Calzone_Factory .up.|> Prototype_AbstractFactory.Interfaces.IPizza
+  Prototype_AbstractFactory.Factories.Pizza_Classic_Factory .up.|> Prototype_AbstractFactory.Interfaces.IPizza
+  Prototype_AbstractFactory.Pizza.Abstracts.Pizza o-- Singleton.Enum.Crust : crust
+  Prototype_AbstractFactory.Pizza.Abstracts.Pizza o-- Singleton.Enum.Dough : dough
+  Prototype_AbstractFactory.Pizza.Abstracts.Pizza o-- Singleton.Enum.Size : size
+  Prototype_AbstractFactory.Pizza.Pizza_Calzone -up-|> Prototype_AbstractFactory.Pizza.Abstracts.Pizza
+  Prototype_AbstractFactory.Pizza.Pizza_Classic -up-|> Prototype_AbstractFactory.Pizza.Abstracts.Pizza
+  SRP.Prepare o-- Singleton.Enum.Crust : crust
+  SRP.Prepare o-- Singleton.Enum.Dough : dough
+  SRP.Prepare o-- Singleton.Enum.Size : size
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
