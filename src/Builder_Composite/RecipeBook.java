@@ -8,7 +8,6 @@ public class RecipeBook implements IRecipeBook { //composite
     private Pizza pizza;
     private String name;
 
-
     private List<IRecipeBook> Recipes;
 
     public RecipeBook(String name) {
@@ -30,5 +29,4 @@ public class RecipeBook implements IRecipeBook { //composite
     public void removeRecipe(IRecipeBook recipe) {
         Recipes.remove(recipe);
     }
-
 }

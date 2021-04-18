@@ -1,7 +1,5 @@
 package Builder_Composite;
 
-import Builder.Pizza;
-
 //Clasa Prepare_Method – afișează lista de ingrediente folosite
 public class PrepareMethod {
 

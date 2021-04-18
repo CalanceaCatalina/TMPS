@@ -1,7 +1,7 @@
 package Builder_Composite;
 
 import Singleton.Enum.*;
-//Clasa BuilderPrepare - reprezintă modul de preparare al pizzei
+//Clasa BuilderPizza - reprezintă modul de preparare al pizzei
 // (selectarea tipului aluatului, mărimea pizzei, topping-urile dorite, etc).
 //in builder noi construim pizza
 

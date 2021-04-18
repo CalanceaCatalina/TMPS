@@ -5,7 +5,7 @@ public class Runner {
     public static void main(String args[]) {
 
         Pizza pizza_Faraon = new BuilderPizza()
-        .addName("Faraon")
+                .addName("Faraon")
                 .addDough(Dough.PIZZA_DOUGH)
                 .addSize(Size.ITALIAN)
                 .addCrust(Crust.CLASSIC)
@@ -16,6 +16,7 @@ public class Runner {
                 .addMagic(Magic.LOVE)
                 .addMagic(Magic.SOUL)
                 .Build();
+
         Pizza pizza_Rusticana = new BuilderPizza()
                 .addName("Rusticana")
                 .addDough(Dough.PIZZA_DOUGH_CORNMEAL)
@@ -26,6 +27,7 @@ public class Runner {
                 .addToppings(Toppings.BASIL)
                 .addToppings(Toppings.BLACK_OLIVES)
                 .Build();
+
         Pizza pizza_Calzone = new BuilderPizza()
                 .addName("Calzone")
                 .addDough(Dough.PIZZA_DOUGH_YEAST)
@@ -38,24 +40,23 @@ public class Runner {
                 .addToppings(Toppings.BASIL)
                 .Build();
 
+
         Recipe recipeFaraon = new Recipe(pizza_Faraon);
         Recipe recipeRusticana = new Recipe(pizza_Rusticana);
-
         Recipe recipeCalzone = new Recipe(pizza_Calzone);
 
-        RecipeBook pizza_classic = new RecipeBook("Pizza Classic Recipe");
-
+        RecipeBook pizza_classic = new RecipeBook("List of Pizza Classic Recipes:");
         pizza_classic.addRecipe(recipeFaraon);
         pizza_classic.addRecipe(recipeRusticana);
 
         pizza_classic.Display();
+        System.out.println(PrepareMethod.getPreparationMethod().getMethod(pizza_Faraon));
+        System.out.println(PrepareMethod.getPreparationMethod().getMethod(pizza_Rusticana));
 
-        RecipeBook pizza_calzone = new RecipeBook("Pizza Calzone Recipe");
-
+        RecipeBook pizza_calzone = new RecipeBook("List of Pizza Calzone Recipes:");
         pizza_calzone.addRecipe(recipeCalzone);
 
         pizza_calzone.Display();
-
+        System.out.println(PrepareMethod.getPreparationMethod().getMethod(pizza_Calzone));
     }
-
 }
